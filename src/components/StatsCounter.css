@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&display=swap');
+
+.stats-section {
+  width: 100%;
+  background-color: #03070d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 8% 60px;
+}
+
+.stats-container {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background-color: #0c1017;
+  border: 1px solid #141a24;
+  border-radius: 20px;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.3);
+  box-shadow: 0 12px 35px -10px rgba(0, 240, 255, 0.2);
+}
+
+.stat-value {
+  font-family: 'Orbitron', monospace, sans-serif;
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  font-weight: 900;
+  color: #00f0ff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 14px;
+  text-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
+}
+
+.stat-label {
+  font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stat-card {
+    padding: 32px 24px;
+  }
+}

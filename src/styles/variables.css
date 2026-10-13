@@ -1,0 +1,35 @@
+:root {
+  /* Color Palette */
+  --bg-primary: #03070d;
+  --bg-surface: #090e17;
+  --bg-card: #0c1017;
+  --bg-card-hover: #111827;
+
+  /* Accent & Glow */
+  --cyan-core: #00f0ff;
+  --cyan-glow: rgba(0, 240, 255, 0.45);
+  --cyan-subtle: rgba(0, 240, 255, 0.12);
+  --purple-glow: rgba(168, 85, 247, 0.4);
+  --emerald-accent: #10b981;
+  --crimson-accent: #ff4757;
+  --amber-accent: #ffa502;
+
+  /* Typography Colors */
+  --text-white: #ffffff;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  /* Borders & Separation */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-cyan: rgba(0, 240, 255, 0.25);
+  --border-cyan-bright: #00f0ff;
+
+  /* Fonts */
+  --font-display: 'Orbitron', monospace, sans-serif;
+  --font-accent: 'Rajdhani', -apple-system, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-box: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-neon: 0 0 20px rgba(0, 240, 255, 0.35);
+}

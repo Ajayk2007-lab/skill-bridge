@@ -1,0 +1,86 @@
+.skillmarket-page {
+  background: #03070d;
+  min-height: 88vh;
+  padding: 60px 8% 80px;
+}
+
+.market-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.market-head h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 6px 0;
+}
+
+.market-head p {
+  color: #94a3b8;
+  margin-bottom: 36px;
+}
+
+.market-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.trend-card {
+  background: #090e17;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trend-card.emerging {
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.trend-card.rising {
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+.trend-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.trend-cat {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.trend-growth {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #10b981;
+}
+
+.trend-card.declining .trend-growth {
+  color: #ff4757;
+}
+
+.trend-name {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.trend-status {
+  font-size: 0.8rem;
+  color: #64748b;
+}

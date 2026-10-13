@@ -1,0 +1,186 @@
+.company-dashboard {
+  background: #03070d;
+  min-height: 88vh;
+  padding: 50px 8% 80px;
+}
+
+.comp-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comp-head h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 6px 0;
+}
+
+.comp-head p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.comp-search-capsule {
+  display: flex;
+  align-items: center;
+  background: #090e17;
+  border: 1px solid #00f0ff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+  margin-bottom: 36px;
+}
+
+.search-symbol {
+  font-size: 1.1rem;
+  margin-right: 12px;
+}
+
+.comp-search-capsule input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.btn-comp-search {
+  background: #00f0ff;
+  color: #03070d;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.comp-candidate-list h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.candidate-card {
+  background: #090e17;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.candidate-card:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+.cand-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.cand-rank {
+  font-size: 0.72rem;
+  color: #00f0ff;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+}
+
+.cand-top h4 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 4px 0;
+}
+
+.cand-readiness {
+  font-size: 0.8rem;
+  color: #10b981;
+}
+
+.cand-score-box {
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.score-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #00f0ff;
+  display: block;
+}
+
+.score-lbl {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.cand-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cand-skill-chip {
+  background: #03070d;
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.cand-ai-reason {
+  background: #03070d;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.cand-ai-reason strong {
+  color: #00f0ff;
+}
+
+.cand-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-cyan-cand {
+  background: #00f0ff;
+  color: #03070d;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline-cand {
+  background: transparent;
+  color: #00f0ff;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}

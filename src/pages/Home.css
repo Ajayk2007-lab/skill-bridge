@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+.sb-home-container {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   SECTION 1: 4 PROBLEM CARDS
+   ======================================================== */
+.sb-problem-section {
+  max-width: 1240px;
+  margin: 60px auto 110px;
+  padding: 0 24px;
+}
+
+.problem-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.problem-card-row {
+  background: #060b13;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 20px;
+  padding: 44px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.problem-card-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.problem-card-row:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 240, 255, 0.2);
+}
+
+.pc-content {
+  flex: 1;
+  max-width: 580px;
+}
+
+.pc-heading {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px;
+  transition: color 0.3s ease;
+}
+
+.problem-card-row:hover .pc-heading {
+  color: #00f0ff;
+}
+
+.pc-description {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  color: #94a3b8;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.pc-graphic-wrapper {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cyber-network-box {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-svg-canvas,
+.iso-svg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.laser-line {
+  stroke: #00f0ff;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 8px #00f0ff);
+  transition: all 0.35s ease;
+}
+
+/* Default Nodes */
+.node-core {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #03070d;
+  border: 3px solid #00f0ff;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
+  z-index: 2;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.satellite-node {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #03070d;
+  border: 2.5px solid #00f0ff;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+  z-index: 2;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.n-tl { top: 8px; left: 8px; }
+.n-tr { top: 8px; right: 8px; }
+.n-bl { bottom: 8px; left: 8px; }
+.n-br { bottom: 8px; right: 8px; }
+
+/* HOVER COLOR FILL (Cyan Glow on Card Hover) */
+.problem-card-row:hover .node-core,
+.problem-card-row:hover .satellite-node,
+.problem-card-row:hover .star-node-dot,
+.problem-card-row:hover .star-center-node,
+.problem-card-row:hover .iso-core-inner,
+.problem-card-row:hover .iso-node-pill {
+  background: #00f0ff !important;
+  fill: #00f0ff !important;
+  box-shadow: 0 0 30px #00f0ff, inset 0 0 10px #ffffff !important;
+}
+
+.problem-card-row:hover .node-core {
+  transform: scale(1.14);
+}
+
+.problem-card-row:hover .laser-line {
+  stroke: #5ef3ff;
+  stroke-width: 6;
+  filter: drop-shadow(0 0 14px #00f0ff);
+}
+
+/* Isometric Card Shapes */
+.iso-core-ring {
+  stroke: #00f0ff;
+  stroke-width: 3;
+  fill: #03070d;
+  filter: drop-shadow(0 0 8px #00f0ff);
+}
+
+.iso-core-inner {
+  stroke: #00f0ff;
+  stroke-width: 2;
+  fill: #03070d;
+  transition: all 0.35s ease;
+}
+
+.iso-node-pill {
+  stroke: #00f0ff;
+  stroke-width: 2.5;
+  fill: #03070d;
+  filter: drop-shadow(0 0 8px #00f0ff);
+  transition: all 0.35s ease;
+}
+
+/* Star Network */
+.star-outer-mesh {
+  stroke: rgba(0, 240, 255, 0.35);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.star-node-dot {
+  stroke: #00f0ff;
+  stroke-width: 2.5;
+  fill: #03070d;
+  transition: all 0.35s ease;
+}
+
+.star-center-node {
+  stroke: #00f0ff;
+  stroke-width: 3;
+  fill: #03070d;
+  transition: all 0.35s ease;
+}
+
+/* Multi-Cluster Satellite Nodes */
+.cluster-node-group {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-tl { top: 0; left: 0; }
+.c-tr { top: 0; right: 0; }
+.c-bl { bottom: 0; left: 0; }
+.c-br { bottom: 0; right: 0; }
+
+.tiny-pip {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #00f0ff;
+  background: #03070d;
+  box-shadow: 0 0 8px #00f0ff;
+  transition: all 0.35s ease;
+}
+
+.tp-1 { top: -4px; right: -4px; }
+.tp-2 { bottom: -4px; left: -4px; }
+
+.problem-card-row:hover .tiny-pip {
+  background: #00f0ff !important;
+}
+
+/* ========================================================
+   SECTION 2: CORE CAPABILITIES (3 CARDS)
+   ======================================================== */
+.sb-capabilities-section {
+  max-width: 1240px;
+  margin: 60px auto 110px;
+  padding: 0 24px;
+}
+
+.cap-header-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cap-main-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.cap-subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.capabilities-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.capability-card {
+  background: #060b13;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 18px;
+  padding: 34px 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.capability-card:hover {
+  transform: translateY(-8px);
+  border-color: #00f0ff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 240, 255, 0.2);
+}
+
+.cap-visual-box {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cap-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cap-svg-core {
+  fill: #03070d;
+  stroke: #00f0ff;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px #00f0ff);
+}
+
+.cap-line {
+  stroke: #00f0ff;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 5px #00f0ff);
+}
+
+.cap-dot {
+  fill: #00f0ff;
+  filter: drop-shadow(0 0 6px #00f0ff);
+}
+
+.radar-ring {
+  fill: none;
+  stroke: rgba(0, 240, 255, 0.35);
+  stroke-width: 1.5;
+}
+
+.radar-cross {
+  stroke: rgba(0, 240, 255, 0.25);
+  stroke-width: 1;
+}
+
+.radar-active-beam {
+  stroke: #a855f7;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 10px #a855f7);
+}
+
+.const-mesh {
+  fill: rgba(0, 240, 255, 0.08);
+  stroke: #00f0ff;
+  stroke-width: 2;
+}
+
+.const-line {
+  stroke: rgba(0, 240, 255, 0.4);
+  stroke-width: 1.5;
+}
+
+.cap-card-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.cap-card-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ========================================================
+   SECTION 3: THE UNIFIED WORKFLOW (7 CAPSULES)
+   ======================================================== */
+.sb-workflow-section {
+  max-width: 1240px;
+  margin: 60px auto 110px;
+  padding: 0 24px;
+}
+
+.wf-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.wf-main-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.wf-subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.workflow-blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.workflow-card-pill {
+  position: relative;
+  background: #00f0ff;
+  border-radius: 14px;
+  padding: 24px 28px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.workflow-card-pill:hover {
+  transform: translateY(-4px);
+  background: #5ef3ff;
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.65);
+}
+
+.wf-pill-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #03070d;
+}
+
+.wf-accent-line {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 3px;
+  height: 60%;
+  background: #00f0ff;
+  transform: translateY(-50%);
+  box-shadow: 0 0 8px #00f0ff;
+}
+
+/* ========================================================
+   SECTION 4: MORE THAN A JOB PORTAL (TABLE + 3D BRAIN)
+   ======================================================== */
+.sb-portal-comparison-section {
+  max-width: 1240px;
+  margin: 60px auto 110px;
+  padding: 0 24px;
+}
+
+.portal-comp-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.comp-main-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 32px;
+}
+
+.comp-table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comp-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1.3fr;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.92rem;
+}
+
+.comp-header-row {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.col-feat {
+  color: #00f0ff;
+  font-weight: 700;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.col-gen {
+  color: #94a3b8;
+}
+
+.col-sb {
+  color: #00f0ff;
+  font-weight: 600;
+}
+
+.comp-graphic-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyber-brain-display {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brain-glow-aura {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(0, 240, 255, 0.15) 60%, transparent 80%);
+  filter: blur(25px);
+  animation: brainGlowPulse 4s ease-in-out infinite alternate;
+}
+
+.brain-svg {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.6));
+}
+
+.brain-outer-lobe {
+  fill: #060b13;
+  stroke: #a855f7;
+  stroke-width: 3;
+}
+
+.brain-hemisphere-divider {
+  stroke: #00f0ff;
+  stroke-width: 3;
+  stroke-dasharray: 4 4;
+}
+
+.brain-neural-circuit {
+  fill: none;
+  stroke: #00f0ff;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px #00f0ff);
+}
+
+.synapse-pip {
+  fill: #00f0ff;
+  filter: drop-shadow(0 0 8px #00f0ff);
+}
+
+.brain-stem {
+  stroke: #a855f7;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+@keyframes brainGlowPulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ========================================================
+   SECTION 5: CONTINUOUS SKILL EVOLUTION
+   ======================================================== */
+.sb-evolution-section {
+  max-width: 1240px;
+  margin: 60px auto 130px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.evo-main-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 50px;
+}
+
+.hud-circular-loop-wrapper {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 0 auto 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hud-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px dashed rgba(0, 240, 255, 0.4);
+}
+
+.r-outer {
+  width: 320px;
+  height: 320px;
+  border: 3px solid transparent;
+  border-top-color: #00f0ff;
+  border-bottom-color: #a855f7;
+  animation: hudRotate 12s linear infinite;
+}
+
+.r-middle {
+  width: 240px;
+  height: 240px;
+  border: 2px solid transparent;
+  border-left-color: #00f0ff;
+  border-right-color: #a855f7;
+  animation: hudRotateReverse 8s linear infinite;
+}
+
+.r-inner {
+  width: 170px;
+  height: 170px;
+  border: 1.5px dashed rgba(0, 240, 255, 0.6);
+}
+
+.hud-center-lens {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: #03070d;
+  border: 2px solid #00f0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.lens-main-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #00f0ff;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.evo-footer-text {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.evo-lead-p {
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.evo-desc-p {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes hudRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes hudRotateReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .problem-card-row,
+  .problem-card-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+  }
+  .capabilities-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .workflow-blocks-grid {
+    grid-template-columns: 1fr;
+  }
+  .portal-comp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================================
+   SECTION 7: PRE-FOOTER CTA BANNER (BELOW EVOLUTION LOOP)
+   ======================================================== */
+.sb-prefooter-cta-section {
+  max-width: 1240px;
+  margin: 60px auto 100px;
+  padding: 0 24px;
+}
+
+.prefooter-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.prefooter-headline {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.18;
+  color: #ffffff;
+  margin: 0 0 24px;
+}
+
+.prefooter-subtext {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin: 0 0 36px;
+  max-width: 520px;
+}
+
+.prefooter-btn-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-cyan-solid {
+  background: #00f0ff;
+  color: #000000;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.25s ease;
+  text-transform: lowercase;
+}
+
+.btn-cyan-solid:hover {
+  background: #5ef3ff;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-cyan-outline {
+  background: transparent;
+  color: #00f0ff;
+  border: 1.5px solid #00f0ff;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-cyan-outline:hover {
+  background: rgba(0, 240, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.prefooter-graphic-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Geodesic Sphere & Pedestal Ring */
+.hero-sphere-stage {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card {
+  position: absolute;
+  background: rgba(6, 11, 19, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.sc-label {
+  font-size: 0.68rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sc-val {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  color: #00f0ff;
+}
+
+.sc-tl { top: 20px; left: 0; }
+.sc-tr { top: 20px; right: 0; }
+.sc-bl { bottom: 45px; left: 0; }
+.sc-br { bottom: 45px; right: 0; }
+
+.geodesic-sphere {
+  width: 240px;
+  height: 240px;
+  z-index: 2;
+  filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.45));
+}
+
+.sphere-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sphere-outer {
+  fill: rgba(0, 240, 255, 0.05);
+  stroke: #00f0ff;
+  stroke-width: 2.5;
+}
+
+.sp-line {
+  stroke: rgba(168, 85, 247, 0.7);
+  stroke-width: 1.5;
+}
+
+.sp-node {
+  fill: #00f0ff;
+  filter: drop-shadow(0 0 6px #00f0ff);
+}
+
+.sp-core-node {
+  fill: #a855f7;
+  filter: drop-shadow(0 0 10px #a855f7);
+}
+
+.pedestal-ring {
+  position: absolute;
+  bottom: 30px;
+  width: 260px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+  background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.15) 0%, transparent 70%);
+}
+
+@media (max-width: 900px) {
+  .prefooter-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .prefooter-btn-row {
+    justify-content: center;
+  }
+}

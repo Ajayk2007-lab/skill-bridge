@@ -1,0 +1,162 @@
+.institution-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: sbFadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.inst-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #a855f7;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inst-header h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #ffffff;
+  margin: 6px 0 8px;
+}
+
+.inst-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.inst-counters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.ic-card {
+  background: #090e17;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ic-label {
+  font-size: 0.78rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ic-val {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.text-cyan { color: #00f0ff; }
+.text-red { color: #ff4757; }
+
+.inst-graph-card {
+  background: #090e17;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.inst-graph-card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.graph-sub {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.velocity-bars-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.velocity-row {
+  background: #03070d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.vr-title-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.vr-subject {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.vr-gap-tag {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.vr-gap-tag.critical {
+  color: #ff4757;
+}
+
+.vr-dual-track {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.track-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.track-tag {
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.bar-bg {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill-inst {
+  height: 100%;
+  background: #a855f7;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.bar-fill-ind {
+  height: 100%;
+  background: #00f0ff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .inst-counters {
+    grid-template-columns: 1fr;
+  }
+}

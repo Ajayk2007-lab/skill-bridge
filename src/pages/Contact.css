@@ -1,0 +1,156 @@
+.contact-page {
+  background: #03070d;
+  min-height: 88vh;
+  padding: 60px 8% 80px;
+}
+
+.contact-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-head h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 6px 0;
+}
+
+.contact-head p {
+  color: #94a3b8;
+  margin-bottom: 36px;
+}
+
+.ai-triage-card {
+  background: #090e17;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 680px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+}
+
+.triage-icon {
+  font-size: 2rem;
+  color: #00f0ff;
+  margin-bottom: 12px;
+}
+
+.ai-triage-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.35rem;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.ai-triage-card p {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  margin-bottom: 24px;
+}
+
+.quick-troubleshoot-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.ts-btn {
+  background: #03070d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ts-btn:hover {
+  border-color: #00f0ff;
+  color: #00f0ff;
+}
+
+.escalate-action {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.escalate-action span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.btn-escalate {
+  background: rgba(0, 240, 255, 0.12);
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.escalated-form {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.escalated-form h4 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.escalated-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.escalated-form label {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.escalated-form input,
+.escalated-form select,
+.escalated-form textarea {
+  background: #03070d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.escalated-form input:focus,
+.escalated-form select:focus,
+.escalated-form textarea:focus {
+  border-color: #00f0ff;
+}
+
+.btn-send-ticket {
+  background: #00f0ff;
+  color: #03070d;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

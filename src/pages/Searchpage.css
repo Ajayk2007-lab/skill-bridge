@@ -1,0 +1,75 @@
+.search-page {
+  background: #03070d;
+  min-height: 88vh;
+  padding: 60px 8% 80px;
+}
+
+.search-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-header h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 6px 0;
+}
+
+.search-header p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.search-input-wrap {
+  display: flex;
+  background: #090e17;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.search-input-wrap input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.btn-search-exec {
+  background: #00f0ff;
+  color: #03070d;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.quick-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.quick-tags-row button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #00f0ff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}

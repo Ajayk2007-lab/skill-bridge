@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&display=swap');
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #02060d;
+  color: #ffffff;
+  padding: 40px 24px 80px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.about-hero {
+  max-width: 900px;
+  margin: 20px auto 60px;
+  text-align: center;
+}
+
+.about-badge {
+  display: inline-block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 0.12em;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 5px 14px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.about-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.cyan-glow {
+  color: #00f0ff;
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.about-tagline {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 0 0 16px;
+}
+
+.about-subtext {
+  font-size: 1.02rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ========================================================
+   CORE CONCEPT (9-PIPELINE STEPS SECTION)
+   ======================================================== */
+.about-concept-section {
+  max-width: 1200px;
+  margin: 40px auto 90px;
+}
+
+.concept-header {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.concept-category-tag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #3b82f6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.concept-main-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.concept-lead-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.concept-split-layout {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.pipeline-steps-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pipeline-step-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.step-num-bubble {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(30, 58, 138, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.step-label-box {
+  flex: 1;
+  background: #080d1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 11px 18px;
+  transition: all 0.2s ease;
+}
+
+.step-label-text {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.pipeline-step-item:hover .step-label-box {
+  border-color: rgba(59, 130, 246, 0.4);
+  background: #0c1427;
+}
+
+.pipeline-step-item:hover .step-num-bubble {
+  border-color: #3b82f6;
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.pipeline-step-item.active .step-num-bubble {
+  background: #2563eb;
+  border-color: #60a5fa;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
+}
+
+.pipeline-step-item.active .step-label-box {
+  background: #0f1c3f;
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+}
+
+.pipeline-step-item.active .step-label-text {
+  color: #ffffff;
+}
+
+/* Central Ecosystem Stage Box */
+.ecosystem-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem-stage-box {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: #050a14;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.eco-orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(59, 130, 246, 0.2);
+}
+
+.ring-outer {
+  width: 360px;
+  height: 360px;
+  animation: orbitClockwise 28s linear infinite;
+}
+
+.ring-middle {
+  width: 270px;
+  height: 270px;
+  border-color: rgba(59, 130, 246, 0.35);
+  animation: orbitCounter 20s linear infinite;
+}
+
+.ring-inner {
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.eco-center-node {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node-icon-wrapper {
+  color: #3b82f6;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
+.node-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.node-subtitle {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.active-step-dossier-pill {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(10, 19, 40, 0.85);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.as-num {
+  color: #60a5fa;
+  font-weight: 800;
+}
+
+.as-title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.as-desc {
+  color: #94a3b8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================================
+   3 PILLARS SECTION
+   ======================================================== */
+.about-pillars {
+  max-width: 1200px;
+  margin: 0 auto 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pillar-card {
+  background: #060b13;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: #00f0ff;
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.12);
+}
+
+.pillar-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.pillar-card h3 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.pillar-card p {
+  font-size: 0.94rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================================
+   DIFFERENTIATION TABLE SECTION
+   ======================================================== */
+.about-diff-section {
+  max-width: 1200px;
+  margin: 0 auto 90px;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-tag {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #00f0ff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-head h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 8px 0;
+}
+
+.section-head p {
+  color: #94a3b8;
+  font-size: 0.98rem;
+}
+
+.diff-table-container {
+  overflow-x: auto;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 14px;
+  background: #060b13;
+}
+
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.diff-table th {
+  background: rgba(2, 6, 13, 0.9);
+  padding: 18px 20px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  color: #64748b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.highlight-col {
+  color: #00f0ff !important;
+}
+
+.diff-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.generic-cell {
+  color: #94a3b8;
+}
+
+.skillbridge-cell {
+  color: #00f0ff;
+  font-weight: 600;
+}
+
+/* ========================================================
+   IMPACT METRICS SECTION
+   ======================================================== */
+.about-impact-section {
+  max-width: 1200px;
+  margin: 0 auto 90px;
+}
+
+.impact-box {
+  background: linear-gradient(135deg, rgba(6, 12, 22, 0.9) 0%, rgba(3, 8, 16, 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 20px;
+  padding: 48px;
+}
+
+.impact-text h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  margin: 8px 0 16px;
+}
+
+.impact-text p {
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 0 32px;
+}
+
+.impact-metrics-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.impact-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.impact-metric .num {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #00f0ff;
+}
+
+.impact-metric .lbl {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ========================================================
+   TEAM SECTION
+   ======================================================== */
+.about-team-section {
+  max-width: 1200px;
+  margin: 0 auto 90px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  background: #060b13;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.team-card:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  transform: translateY(-4px);
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 240, 255, 0.1);
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  font-family: 'Orbitron', monospace;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #ffffff;
+}
+
+.member-role {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0 0 8px;
+}
+
+.member-id {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ========================================================
+   CTA SECTION
+   ======================================================== */
+.about-cta {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 80%);
+  padding: 50px 20px;
+  border-radius: 20px;
+  border: 1px dashed rgba(0, 240, 255, 0.3);
+}
+
+.about-cta h3 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  margin: 0 0 24px;
+}
+
+.btn-cyan-about {
+  background: #00f0ff;
+  color: #02060d;
+  border: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 14px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-cyan-about:hover {
+  background: #5ef3ff;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Keyframes */
+@keyframes orbitClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitCounter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .concept-split-layout {
+    grid-template-columns: 1fr;
+  }
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-box {
+    padding: 24px;
+  }
+}
