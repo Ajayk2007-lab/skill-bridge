@@ -101,3 +101,29 @@ Steps to contribute:
 2. Create a new branch (feature/your-feature)
 3. Commit changes
 4. Push and open a Pull Request
+
+
+## 📌 Project Status
+
+SkillBridge is currently in **active development**.  
+At this stage, the project includes a **React + Vite frontend** with Tailwind CSS styling and smooth animations.  
+
+- 🔹 **Backend & Database** → Not yet implemented (planned with Node.js + Express + PostgreSQL/Supabase).  
+- 🔹 **AI Integration** → Placeholder components exist, but actual APIs are not yet connected.  
+- 🔹 **Contribution Scope** → Since backend and database are pending, contributors can help in:
+  - Designing and implementing REST APIs / GraphQL endpoints
+  - Setting up authentication & authorization
+  - Integrating database models (users, skills, opportunities)
+  - Building admin dashboards
+  - Connecting AI APIs for skill intelligence
+  - Writing tests and improving code structure
+
+
+
+## 💡 Contribution Ideas
+- Implement backend APIs with Node.js/Express
+- Add database schema with PostgreSQL/Supabase
+- Integrate authentication (JWT/OAuth)
+- Connect AI APIs for skill gap analysis
+- Improve UI/UX with more animations
+- Write unit/integration tests
